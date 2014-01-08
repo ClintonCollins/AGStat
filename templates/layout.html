@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<head>
+    {% block head %}
+		<title>AllGamer GameStat</title>
+        <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+		<meta charset="utf-8" />
+    <title>{% block title %}{% endblock %} - AllGamer GameStat</title>
+    {% endblock %}
+	</head>
+	<body>
+    <div id="logo-box"><img id="logo" src="/static/img/aglogo.png" alt="AllGamer Logo"></div>
+    <div class="main">
+        <div class="main-content">
+            {% block content %}{% endblock %}
+            </div>
+    </div>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}
+            <form action="" method="post">
+                <input autofocus="autofocus" name="ip" type="text" placeholder="127.0.0.1" />
+            <br>
+                <input name="port" type="text" placeholder="21025" />
+            <br>
+            <select name="game">
+            <option value="starbound" selected>Starbound</option>
+            </select>
+            <div>
+                <input name="submit" type="submit" value="Submit"/>
+                <br>
+            </div>
+        </form>
+{% endblock %}
+
