@@ -10,7 +10,7 @@ body {
 }
 
 #main {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.25);
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
@@ -19,7 +19,22 @@ body {
 	border-bottom-right-radius: 5px;
     box-shadow: 6px 5px 8px #000000;
 	padding-top: 25px;
+    padding-bottom: 50px;
 	border-top: 1px solid rgb(10, 10, 10);
+}
+
+#data-main {
+    background-color: rgb(237, 237, 237);
+    width: 500px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    outline:none;
+    border-color: rgba(3, 237, 48, 0.22);
+    box-shadow:0 0 10px rgba(3, 237, 48, 0.22);
 }
 
 #main-content {
@@ -37,4 +52,40 @@ body {
     border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	text-align: center;
+}
+
+label {
+    display:block;
+    margin:20px;
+    width:420px;
+    overflow:auto;
+    font-family:sans-serif;
+    font-size:20px;
+    color:#444;
+    text-shadow:0 0 2px #ddd;
+    padding:20px 10px 10px 0;
+}
+
+input, select {
+    width:200px;
+    border:2px solid rgb(127, 127, 127);
+    border-radius:7px;
+    font-size:20px;
+    padding:5px;
+    margin: 10px;
+
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For all Gecko based browsers */
+          box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    outline:none;
+    border-color: rgba(3, 237, 48, 0.22);
+    box-shadow:0 0 10px rgba(3, 237, 48, 0.22);
+}
+
+#hr-player {
+    color: rgba(144, 144, 144, 0.28);
+    width: 80%;
 }

@@ -1,13 +1,17 @@
 {% extends "layout.html" %}
 {% block title %}Index{% endblock %}
 {% block content %}
+    <div id="data-main">
     <h4>Total Players: {{ players }}</h4>
+    <hr>
     <h4>Current Players:</h4>
-    <ul>
     {% for player in player_list %}
-  <li>{{ player }}</li>
+        <hr id="hr-player">
+  {{ player }}
     {% endfor %}
+    <hr id="hr-player">
+    <br>
     <br>
     <a href="/">Check Another Server</a>
-</ul>
+   </div>
 {% endblock %}
