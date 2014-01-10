@@ -3,6 +3,9 @@ import query
 import socket
 app = Flask(__name__)
 
+cache = []
+print cache
+
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
@@ -19,15 +22,20 @@ def index():
         except socket.error:
             ip = socket.gethostbyname(ip)
         print 'Using IP: %s' % ip
-        if game == 'starbound':
+        if game == 'Starbound':
             lookup = query.SourceQuery(ip, int(port))
             data = lookup.main()
             players = data['players']
             player_list = data['player_list']
         else:
             return render_template('index.html')
+        if len(cache) > 4:
+            cache.pop(0)
+        cache.append({'game': game, 'ip': ip, 'port': port})
+        print len(cache)
         return render_template('data.html', players=players, player_list=player_list)
-    return render_template('index.html')
+    print cache
+    return render_template('index.html', cache=cache)
 
 
 if __name__ == '__main__':

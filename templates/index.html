@@ -7,12 +7,22 @@
                 <input name="port" type="text" placeholder="21025" />
             <br>
             <select name="game">
-            <option value="starbound" selected>Starbound</option>
+            <option value="Starbound" selected>Starbound</option>
             </select>
             <div>
                 <input name="submit" type="submit" value="Submit"/>
                 <br>
             </div>
         </form>
+    <hr id="hr-player">
+    <div id="data-front">
+    <h3>Last 5 Servers Checked</h3>
+    {% for server in cache %}
+        <hr id="hr-player">
+        {{ server['game'] }} - {{ server['ip'] }} : {{ server['port'] }}
+        <br>
+    {% endfor %}
+    <hr id="hr-player">
+    </div>
 {% endblock %}
 
